@@ -18,7 +18,9 @@ typedef struct      s_list
 }                                   t_list;
 
 void            ft_putchar(char c);
+void            ft_putchar_fd(char, int fd);
 void            ft_putstr(const char *str);
+void            ft_putstr_fd(const char *str, int fd);
 void            ft_putnbr(int n);
 void            *ft_memcpy(void *s1, const void *s2, size_t n);
 void            *ft_memccpy(void *s1, const void *s2, int c, size_t n);
@@ -48,6 +50,7 @@ char            *ft_strncat(char *dest, const char *src, size_t n);
 char            *ft_strchr(const char *s, int c);
 char            *ft_strrchr(const char *s, int c);
 char            *ft_strnew(size_t size);
+char            *ft_strsub(char const *s, unsigned int start, size_t len);
 void            ft_strdel(char **as);
 void            ft_strclr(char *s);
 

@@ -31,8 +31,11 @@ SRCS = ft_isalpha.c \
 	   ft_strclr.c \
 	   ft_strequ.c \
 	   ft_strnequ.c \
+	   ft_strsub.c \
 	   ft_putchar.c \
+	   ft_putchar_fd.c \
 	   ft_putstr.c \
+	   ft_putstr_fd.c \
 	   ft_putnbr.c \
 	   ft_atoi.c \
 
