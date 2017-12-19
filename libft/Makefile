@@ -29,6 +29,8 @@ SRCS = ft_isalpha.c \
 	   ft_strnew.c \
 	   ft_strdel.c \
 	   ft_strclr.c \
+	   ft_strequ.c \
+	   ft_strnequ.c \
 	   ft_putchar.c \
 	   ft_putstr.c \
 	   ft_putnbr.c \
