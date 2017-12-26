@@ -8,12 +8,12 @@ char    *ft_strsub(char const *s, unsigned int start, size_t len)
     i = 0;
     if (s == '\0')
     {
-        return ('\0');
+        return (NULL);
     }
     substr = (char *)malloc(sizeof(char) * (len +1));
     if (substr == '\0')
     {
-        return ('\0');
+        return (NULL);
     }
     while (len--)
     {
