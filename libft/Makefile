@@ -6,7 +6,7 @@
 #    By: atemunov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 12:35:02 by atemunov          #+#    #+#              #
-#    Updated: 2018/02/19 12:52:02 by atemunov         ###   ########.fr        #
+#    Updated: 2018/02/19 13:02:57 by atemunov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,17 +44,18 @@ STRINGS= strings/ft_isalpha \
 MEMORY= memory/ft_memcmp \
 		memory/ft_memcpy \
 		memory/ft_memccpy \
-        memory/ft_memchr \
-        memory/ft_memalloc \
-        memory/ft_memset \
-        memory/ft_memdel \
+		memory/ft_memchr \
+		memory/ft_memalloc \
+		memory/ft_memset \
+		memory/ft_memdel \
 		memory/ft_memmove \
 	
 OUTPUT= output/ft_putchar \
 		output/ft_putchar_fd \
 		output/ft_putstr \
 		output/ft_putstr_fd \
-		output/ft_putnbr \output/print_bits \
+		output/ft_putnbr \
+		output/print_bits \
 	
 
 SRCS= 	$(addprefix srcs/, $(STRINGS) $(MEMORY) $(OUTPUT))
