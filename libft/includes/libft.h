@@ -1,4 +1,4 @@
-#ifndef LIBFT_H
+#ifndef LIBFT_H // Include Guard (Prevents the .h file from being multiply included in to one .c file)
 # define LIBFT_H
 
 # include <stdlib.h>
@@ -11,12 +11,12 @@
 # define DIGIT(x) (x >= '0' && x <= '9')
 # define ISIGN(x) (x == '+' || x == '-')
 
-typedef struct      s_list
-{
-    void                    *content;
+typedef struct      s_list { //struct type
+
+    void                    *content; //struct attributes
     size_t                  content_size;
     struct s_list   *next;
-}                                   t_list;
+}                                   t_list; //struct variable
 
 void            ft_putchar(char c);
 void            ft_putchar_fd(char, int fd);
@@ -29,7 +29,9 @@ void            *ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void            *ft_memchr(const void *s, int c, size_t n);
 void            *ft_memalloc(size_t size);
 void		*ft_memset(void *b, int c, size_t len);
+void		*ft_memmove(void *dst, const void *src, size_t len);
 void            ft_memdel(void **ap);
+void		ft_bzero(void *s, size_t n);
 int             ft_isalpha(int c);
 int             ft_toupper(int c);
 int             ft_tolower(int c);
@@ -47,6 +49,7 @@ int             ft_strnequ(char const *s1, char const *s2, size_t n);
 size_t          ft_strlen(const char *str);
 char            *ft_strdup(char *src);
 char            *ft_strcpy(char *dest, const char *src);
+char		*ft_strncpy(char *dst, const char *src, size_t len);
 char            *ft_strcat(char *dest, const char *src);
 char            *ft_strncat(char *dest, const char *src, size_t n);
 char            *ft_strchr(const char *s, int c);

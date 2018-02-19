@@ -11,7 +11,7 @@ void    *ft_memcpy(void *s1, const void *s2, size_t n)
     }
     c1 = (char *)s1;
     c2 = (char *)s2;
-    while (--n)
+    while (n--)
     {
         *c1++ = *c2++;
     }

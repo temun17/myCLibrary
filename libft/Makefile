@@ -13,6 +13,7 @@ STRINGS= strings/ft_isalpha \
 	strings/ft_strlen \
 	strings/ft_strdup \
 	strings/ft_strcpy \
+	strings/ft_strncpy \
 	strings/ft_strcat \
 	strings/ft_strncat \
 	strings/ft_strchr \
@@ -26,6 +27,7 @@ STRINGS= strings/ft_isalpha \
 	strings/ft_strnequ \
 	strings/ft_strsub \
 	strings/ft_atoi \
+	strings/ft_bzero \
 
 MEMORY= memory/ft_memcmp \
         memory/ft_memcpy \
@@ -34,6 +36,7 @@ MEMORY= memory/ft_memcmp \
         memory/ft_memalloc \
         memory/ft_memset \
         memory/ft_memdel \
+	memory/ft_memmove \
 	
 OUTPUT= output/ft_putchar \
 	output/ft_putchar_fd \
