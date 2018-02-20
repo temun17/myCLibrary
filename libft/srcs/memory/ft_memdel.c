@@ -6,14 +6,14 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:43:09 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:43:13 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 14:31:24 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void    ft_memdel(void **ap)
+void	ft_memdel(void **ap)
 {
-    free(*ap);
-    *ap = NULL;
+	free(*ap);
+	*ap = NULL;
 }

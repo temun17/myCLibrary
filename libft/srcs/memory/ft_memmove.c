@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:43:29 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:43:33 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 14:46:54 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,4 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 	ft_memcpy(s1, b, len);
 	free(b);
 	return (s1);
-
 }

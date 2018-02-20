@@ -6,21 +6,21 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:59:28 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:59:30 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:08:58 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int ft_strnequ(const char *s1, const char *s2, size_t n)
+int	ft_strnequ(const char *s1, const char *s2, size_t n)
 {
-    if (s1 == '\0' || s2 == '\0')
-    {
-        return (0);
-    }
-    if (!ft_strncmp(s1, s2, n))
-    {
-        return (1);
-    }
-    return (0);
+	if (s1 == '\0' || s2 == '\0')
+	{
+		return (0);
+	}
+	if (!ft_strncmp(s1, s2, n))
+	{
+		return (1);
+	}
+	return (0);
 }

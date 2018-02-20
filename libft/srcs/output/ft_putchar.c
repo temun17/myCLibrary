@@ -6,13 +6,13 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:44:32 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:44:36 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:26:26 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void    ft_putchar(char c)
+void	ft_putchar(char c)
 {
-    write(1, &c, 1);
+	write(1, &c, 1);
 }

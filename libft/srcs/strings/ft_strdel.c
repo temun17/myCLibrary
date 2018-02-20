@@ -6,13 +6,13 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:57:25 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:57:28 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:21:34 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void    ft_strdel(char **as)
+void	ft_strdel(char **as)
 {
-    ft_memdel((void **)as);
+	ft_memdel((void **)as);
 }

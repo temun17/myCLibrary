@@ -6,17 +6,17 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:58:21 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:58:22 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:19:43 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int ft_isalnum(int c)
+int	ft_isalnum(int c)
 {
-    if ((LCASE(c)) || (UCASE(c)) || (DIGIT(c)))
-    {
-        return (1);
-    }
-    return (0);
+	if ((LCASE(c)) || (UCASE(c)) || (DIGIT(c)))
+	{
+		return (1);
+	}
+	return (0);
 }

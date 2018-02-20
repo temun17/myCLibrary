@@ -6,16 +6,16 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:58:11 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:58:13 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:19:59 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int ft_toupper(int c)
+int	ft_toupper(int c)
 {
-    if (UCASE(c))
-        return (1);
-    else
-        return (0);
+	if (UCASE(c))
+		return (1);
+	else
+		return (0);
 }

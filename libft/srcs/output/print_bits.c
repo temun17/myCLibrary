@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:52:37 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:52:41 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:26:49 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	print_bits(unsigned char octet)
 {
 	int oct;
 	int div;
-	
+
 	div = 128;
 	oct = octet;
 	while (div != 0)

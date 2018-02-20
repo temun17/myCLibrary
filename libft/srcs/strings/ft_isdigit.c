@@ -6,17 +6,17 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:58:29 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:58:31 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:21:56 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int ft_isdigit(int c)
+int	ft_isdigit(int c)
 {
-    if (DIGIT(c))
-    {
-        return (1);
-    }
-    return (0);
+	if (DIGIT(c))
+	{
+		return (1);
+	}
+	return (0);
 }

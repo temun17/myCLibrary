@@ -6,27 +6,27 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:38:16 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:39:37 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 14:57:12 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void    *ft_memcpy(void *s1, const void *s2, size_t n)
+void	*ft_memcpy(void *s1, const void *s2, size_t n)
 {
-    char *c1;
-    char *c2;
+	char *c1;
+	char *c2;
 
-    if (n == 0 || s1 == s2)
-    {
-        return (s1);
-    }
-    c1 = (char *)s1;
-    c2 = (char *)s2;
-    while (n--)
-    {
-        *c1++ = *c2++;
-    }
-    *c1 = *c2;
-    return (s1);
+	if (n == 0 || s1 == s2)
+	{
+		return (s1);
+	}
+	c1 = (char *)s1;
+	c2 = (char *)s2;
+	while (n--)
+	{
+		*c1++ = *c2++;
+	}
+	*c1 = *c2;
+	return (s1);
 }

@@ -6,25 +6,23 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:45:21 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:45:26 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:28:54 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void    ft_putnbr(int nb)
+void	ft_putnbr(int nb)
 {
-    if (nb < 0)
-    {
-        nb = -nb;
-    }
-    if (nb >= 10)
-    {
-        ft_putnbr(nb / 10);
-        ft_putnbr(nb % 10);
-    }
-    else
-        ft_putchar(nb + '0');
+	if (nb < 0)
+	{
+		nb = -nb;
+	}
+	if (nb >= 10)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+		ft_putchar(nb + '0');
 }
-
-

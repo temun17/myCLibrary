@@ -6,22 +6,22 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:56:22 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 12:56:26 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/19 17:23:17 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-int ft_isspace(int c)
+int	ft_isspace(int c)
 {
-    if ((c == '\t')
-            || (c == '\n')
-            || (c == '\v')
-            || (c == '\f')
-            || (c == '\r')
-            || (c == ' '))
-    {
-        return (1);
-    }
-    return (0);
+	if ((c == '\t')
+			|| (c == '\n')
+			|| (c == '\v')
+			|| (c == '\f')
+			|| (c == '\r')
+			|| (c == ' '))
+	{
+		return (1);
+	}
+	return (0);
 }
