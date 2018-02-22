@@ -6,7 +6,7 @@
 #    By: atemunov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 12:35:02 by atemunov          #+#    #+#              #
-#    Updated: 2018/02/19 13:02:57 by atemunov         ###   ########.fr        #
+#    Updated: 2018/02/22 11:34:30 by allentemu        ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,6 +28,7 @@ STRINGS= strings/ft_isalpha \
 		 strings/ft_strncpy \
 		 strings/ft_strcat \
 		 strings/ft_strncat \
+		 strings/ft_strlcat \
 		 strings/ft_strchr \
 		 strings/ft_strrchr \
 		 strings/ft_strcmp \
@@ -38,7 +39,17 @@ STRINGS= strings/ft_isalpha \
 		 strings/ft_strequ \
 		 strings/ft_strnequ \
 		 strings/ft_strsub \
+		 strings/ft_strstr \
+		 strings/ft_strnstr \
+		 strings/ft_striter \
+		 strings/ft_striteri \
+		 strings/ft_strmap \
+		 strings/ft_strmapi \
+		 strings/ft_strjoin \
+		 strings/ft_strtrim \
+		 strings/ft_strsplit \
 		 strings/ft_atoi \
+		 strings/ft_itoa \
 		 strings/ft_bzero \
 
 MEMORY= memory/ft_memcmp \
@@ -55,10 +66,20 @@ OUTPUT= output/ft_putchar \
 		output/ft_putstr \
 		output/ft_putstr_fd \
 		output/ft_putnbr \
+		output/ft_putnbr_fd \
 		output/print_bits \
+		output/ft_putendl \
+		output/ft_putendl_fd \
+
+LISTS= lists/ft_lstnew \
+		lists/ft_lstdelone \
+		lists/ft_lstdel \
+		lists/ft_lstadd \
+		lists/ft_lstnew \
+		lists/ft_lstiter \
 	
 
-SRCS= 	$(addprefix srcs/, $(STRINGS) $(MEMORY) $(OUTPUT))
+SRCS= 	$(addprefix srcs/, $(STRINGS) $(MEMORY) $(OUTPUT) $(LISTS))
 
 CFILES= $(addsuffix .c, $(SRCS))
 
@@ -92,5 +113,3 @@ fclean: clean
 re: fclean all
 
 .PHONY: make all clean fclean re
-	/* I used .PHONY to make sure that gnu make will still run \
-		even if files called already exist in the directory */

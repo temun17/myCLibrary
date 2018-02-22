@@ -1,38 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_lstmap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 12:37:04 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/20 13:40:20 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 11:26:37 by allentemu         #+#    #+#             */
+/*   Updated: 2018/02/22 11:32:39 by allentemu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
-	char *c1;
-	char *c2;
-	size_t temp;
-
-	if (s1 == s2 || n == 0)
+	t_list *curr;
+	
+	if (lst)
 	{
-		return (s1);
-	}
-	temp = 0;
-	c1 = (char *)s1;
-	c2 = (char *)s2;
-	while (temp < n)
-	{
-		c1[temp] = c2[temp];
-		if (c1[temp] == c)
-		{
-			return (c1 + temp + 1);
-		}
-		temp++;
+		curr = f(lst);
+		curr->next = ft_lstmap(lst->curr, f);
+		return (curr);
 	}
 	return (NULL);
 }

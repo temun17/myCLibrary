@@ -1,38 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memccpy.c                                       :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 12:37:04 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/20 13:40:20 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/20 19:01:16 by allentemu         #+#    #+#             */
+/*   Updated: 2018/02/20 21:55:08 by allentemu        ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-void	*ft_memccpy(void *s1, const void *s2, int c, size_t n)
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
-	char *c1;
-	char *c2;
-	size_t temp;
+	char *str;
+	int	i = 0;
 
-	if (s1 == s2 || n == 0)
+	if (!s || !f)
+		return (NULL);
+	str = (char *)malloc((ft_strlen(s) + 1) * sizeof(char));
+	if (str)
 	{
-		return (s1);
-	}
-	temp = 0;
-	c1 = (char *)s1;
-	c2 = (char *)s2;
-	while (temp < n)
-	{
-		c1[temp] = c2[temp];
-		if (c1[temp] == c)
+		while (s[i])
 		{
-			return (c1 + temp + 1);
+			str[i] = f(i, s[i]);
+			i++;
 		}
-		temp++;
+		str[i] = '\0';
+		return (str);
 	}
 	return (NULL);
 }
