@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:57:51 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/26 09:35:55 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/03/01 20:39:46 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 char	*ft_strncpy(char *dst, const char *src, size_t len)
 {
-	size_t  i;
+	size_t	i;
 
 	i = 0;
 	while (src[i] && (i < len))

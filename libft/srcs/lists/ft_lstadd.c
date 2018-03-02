@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 12:37:01 by atemunov          #+#    #+#             */
-/*   Updated: 2018/03/01 16:28:00 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/03/01 20:41:32 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@ void	ft_lstadd(t_list **alst, t_list *new)
 	if (!new && !temp)
 		return ;
 	new->next = temp;
-	*alst = new;	
+	*alst = new;
 }

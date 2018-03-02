@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:59:15 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/27 17:27:23 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/03/01 20:39:02 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,6 @@ char	*ft_strncat(char *dest, const char *src, size_t n)
 		s1[j] = s2[i];
 		i++;
 		j++;
-		
 	}
 	s1[j] = '\0';
 	return (s1);

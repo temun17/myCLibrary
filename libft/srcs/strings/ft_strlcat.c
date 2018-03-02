@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/22 12:42:44 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/27 17:39:43 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/03/01 20:40:42 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 	size_t	i;
 	size_t	l;
 	size_t	k;
-	char 	*s2;
+	char	*s2;
 
 	i = 0;
 	l = 0;

@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:43:29 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/27 17:00:27 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/03/01 20:34:46 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	*ft_memmove(void *dst, const void *src, size_t len)
 		return (ft_memcpy(s1, s2, len));
 	else
 		i = len;
-		while (i--)
-			*((unsigned char *)s1 + i) = *((unsigned char *)s2 + i);
-		return (s1);
+	while (i--)
+		*((unsigned char *)s1 + i) = *((unsigned char *)s2 + i);
+	return (s1);
 }
