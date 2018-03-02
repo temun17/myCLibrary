@@ -3,47 +3,39 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 16:18:39 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/20 16:38:45 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/26 13:50:41 by atemunov          #+#    #+#             */
+/*   Updated: 2018/03/01 19:23:38 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-char	*ft_strnstr(char *haystack, const char *needle, size_t len)
+char    *ft_strnstr(const char *s1, const char *s2, size_t len)
 {
-	char	*big;
-	char	*small;
-	size_t	i;
-
-	big = (char *)haystack;
-	small = (char *)needle;
-	i = ft_strlen(small);
-	if (i == 0)
+	size_t            i;
+	size_t            j;
+	size_t            count;
+	
+	i = 0;
+	j = 0;
+	count = 0;
+	if (!(s2[j]))
+		return ((char *)s1);
+	while(s2[count])
+		count++;
+	while (s1[i] && i < len)
 	{
-		return (char *)(big);
-	}
-	if (i > len)
-	{
-		return ((char *)('\0'));
-	}
-	while (big != '\0' && len)
-	{
-		if (big == small)
-		{
-			while((big + i) == (small + i) && len - i)
-			{
-				i++;
-				if ((small + i) == '\0')
-				{
-					return (big);
-				}
-			}
-			len--;
-			big++;
+		j = 0;
+		while (s1[i] == s2[j] && s1[i] && s2[j] && i < len)
+	    {
+			i++;
+			j++;
 		}
+		if (!(s2[j]))
+			return ((char *)&(s1[i - count]));
+		i = (i - j) + 1;
 	}
 	return (NULL);
 }

@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:55:36 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 17:10:03 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/26 15:29:40 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_tolower(int c)
 {
 	if (LCASE(c))
-		return (1);
-	else
-		return (0);
+		return (c + 32);
+	return (c);
 }

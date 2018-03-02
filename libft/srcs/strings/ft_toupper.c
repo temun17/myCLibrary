@@ -5,8 +5,8 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/19 12:58:11 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 17:19:59 by atemunov         ###   ########.fr       */
+/*   Created: 2018/02/26 15:26:28 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/26 15:28:44 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 int	ft_toupper(int c)
 {
 	if (UCASE(c))
-		return (1);
-	else
-		return (0);
+		return (c - 32);
+	return (c);
 }

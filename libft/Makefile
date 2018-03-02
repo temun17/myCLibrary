@@ -6,7 +6,7 @@
 #    By: atemunov <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2018/02/19 12:35:02 by atemunov          #+#    #+#              #
-#    Updated: 2018/02/22 11:34:30 by allentemu        ###   ########.fr        #
+#    Updated: 2018/02/26 13:44:41 by atemunov         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,9 +45,9 @@ STRINGS= strings/ft_isalpha \
 		 strings/ft_striteri \
 		 strings/ft_strmap \
 		 strings/ft_strmapi \
-		 strings/ft_strjoin \
 		 strings/ft_strtrim \
 		 strings/ft_strsplit \
+		 strings/ft_strjoin \
 		 strings/ft_atoi \
 		 strings/ft_itoa \
 		 strings/ft_bzero \

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_lstiter.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/22 11:36:19 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/22 11:45:22 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 12:37:30 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/22 12:38:10 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 void	ft_lstiter(t_list *lst, void (*f)(t_list *elem))
 {
-	t_list	 *curr;
-	
+	t_list	*curr;
+
 	curr = lst;
 	if (!curr || !f)
 		return ;

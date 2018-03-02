@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 12:20:55 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/21 14:54:49 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 13:16:12 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/22 13:26:18 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ char	*ft_strtrim(char const *s)
 {
 	unsigned int	start;
 	unsigned int	end;
-	char	*new;
+	char			*new;
 
 	start = 0;
 	while (ESCAPE(s[start]))
@@ -33,5 +33,4 @@ char	*ft_strtrim(char const *s)
 	if (!(new = (ft_strsub(s, start, end - start + 1))))
 		return (NULL);
 	return (new);
-
 }

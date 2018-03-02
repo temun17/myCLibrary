@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strlcat.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 11:25:00 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/20 13:36:51 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 12:42:44 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/27 17:39:43 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,26 +14,25 @@
 
 size_t	ft_strlcat(char *dst, const char *src, size_t dstsize)
 {
-	size_t i;
-	size_t j;
-	size_t k;	
+	size_t	i;
+	size_t	l;
+	size_t	k;
+	char 	*s2;
 
 	i = 0;
-	j = 0;
+	l = 0;
 	k = 0;
-	while (dst[i] != '\0')
-	{
+	s2 = (char *)src;
+	if (dstsize <= ft_strlen(dst))
+		return (ft_strlen(s2) + dstsize);
+	while ((dst[i] != '\0') && i < (dstsize - 1))
 		i++;
-	}
-	while (src[j] != '\0' && j < dstsize)
+	while (s2 && i < (dstsize - 1))
 	{
-		dst[i + j] = src[j];
-		j++;
+		dst[i] = *s2;
+		i++;
+		s2++;
 	}
-	dst[i + j] = '\0';
-	while (src[k] != '\0')
-	{
-		k++;
-	}
-	return(k + dstsize);
+	dst[i] = '\0';
+	return (ft_strlen(dst) + ft_strlen(s2));
 }

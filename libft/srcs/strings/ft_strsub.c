@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:59:37 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 17:15:31 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/22 13:45:01 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	int i;
-	char *substr;
+	int		i;
+	char	*substr;
 
 	i = 0;
 	if (s == '\0')

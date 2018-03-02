@@ -3,19 +3,19 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 15:47:35 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/21 16:15:38 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 13:01:31 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/27 14:48:40 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-static size_t ft_mystrlen(int n)
+static	size_t	ft_mystrlen(int n)
 {
 	size_t	a;
-	
+
 	a = 1;
 	while (n /= 10)
 		a++;
@@ -24,8 +24,8 @@ static size_t ft_mystrlen(int n)
 
 char	*ft_itoa(int n)
 {
-	char	*str;
-	size_t	len;
+	char			*str;
+	size_t			len;
 	unsigned int	sign;
 
 	len = ft_mystrlen(n);
@@ -43,4 +43,4 @@ char	*ft_itoa(int n)
 	if (n < 0)
 		*(str + 0) = '-';
 	return (str);
-}	
+}

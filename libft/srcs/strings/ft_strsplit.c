@@ -3,74 +3,58 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strsplit.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/21 14:59:10 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/21 15:44:32 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 12:46:58 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/28 14:59:27 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../../includes/libft.h"
 
-static size_t	ft_wordcount(char const *s, char c)
+static char		*ft_find_word(char const *s, int *s2, char c)
 {
-	size_t i;
-	size_t add;
-	
-	add = 0;
+	int 			i;
+	unsigned char 	start;
+	char			*word;
+
 	i = 0;
+	while (s[*s2] == c && s[*s2] != '\0')
+		(*s2)++;
+	start = *s2;
+	while (s[start] != c * s[start] != '\0')
+		start++;
+	if (!(word = ft_strnew(*s2 - start)))
+		return (NULL);
+	while (start < *s2)
+		word[i++] = s[start++];
+	word[i] = 0;
+	return (word);
+}
+char				**ft_strsplit(const char *s, char c)
+{
+	char 	**strings;
+	int		i;
+	int		count;
+	int		j;
+
+	j = 0;
+	count = 0;
+	i = 0;
+	if (s < 0)
+		return (NULL);
+	if (!(strings = (char **)malloc((count + 1) * sizeof(char *))))
+		return (NULL);
 	while (s[i] != '\0')
 	{
-		while (s[i] == c)
-			i++;
-		if (s[i] != c && s[i])
-			add++;
-		if (s[i])
-			i++;
-	}
-	return (add);
-}
-
-static unsigned int	ft_mystrnew(const char *s, char c)
-{
-	int	a;
-	
-	a = 0;
-	while (s[a] && s[a] != c)
-		a++;
-	return (a);
-}
-
-char	**ft_strsplit(const char *s, char c)
-{
-	char	**new;
-	char	**strings;
-	unsigned int	i;
-	unsigned int	j;
-	unsigned int 	k;
-	
-	if (s)
-	{
-		if (!(new = (char **)malloc(sizeof(char *) * (ft_wordcount(s,c) + 1))))
-			return (NULL);
-		strings = new;
-		i = 0;
-		k = 0;
-		while (s[i])
+		if (s[i] != c)
 		{
-			while (s[i] == c)
-				i++;
-			if (!(new[k] = (char *)malloc(sizeof(char) * (ft_mystrnew(s, c) + 1))))
-				return (NULL);
-			ft_memset(new[k], 0, (ft_mystrnew(s, c) + 1));
-			j = 0;
-			while (s[i] && s[i] != c)
-				new[j][k++] = s[i++];
-			new[j++][k] = '\0';
-			if (s[i])
-				i++;
+			strings[count] = ft_find_word((char*)s, &i, c);
+			count++;
 		}
-		return (strings);
+		else
+			i++;
 	}
-	return (NULL);
-}	
+	strings[count] = 0;
+	return (strings);
+}

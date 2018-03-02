@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: allentemunovic <ajtemunovic@gmail.com      +#+  +:+       +#+        */
+/*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2018/02/20 17:27:34 by allentemu         #+#    #+#             */
-/*   Updated: 2018/02/20 18:21:55 by allentemu        ###   ########.fr       */
+/*   Created: 2018/02/22 12:52:05 by atemunov          #+#    #+#             */
+/*   Updated: 2018/02/22 12:52:25 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	unsigned int i;	
+	unsigned int i;
 
 	i = 0;
 	if (s == NULL || f == NULL)

@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:36:03 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/22 11:36:02 by allentemu        ###   ########.fr       */
+/*   Updated: 2018/03/01 19:09:34 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,21 +17,21 @@
 # include <strings.h>
 # include <unistd.h>
 
-# define UCASE(x) (x >= 'A' && x <= 'Z')
-# define LCASE(x) (x >= 'a' && x <= 'z')
+# define UCASE(x) (x >= 'a' && x <= 'z')
+# define LCASE(x) (x >= 'A' && x <= 'Z')
 # define ALPHA(x) (UCASE(x) || LCASE(x))
 # define DIGIT(x) (x >= '0' && x <= '9')
 # define ISIGN(x) (x == '+' || x == '-')
 # define ESCAPE(x) (x == ' ' || x == '\n' || x == '\t')
 
-typedef struct		s_list {
-
+typedef struct	s_list
+{
 	void			*content;
 	size_t			content_size;
 	struct s_list	*next;
-}					t_list;
+}				t_list;
 
-void			ft_putchar(char c);
+void			ft_putchar(wchar_t c);
 void			ft_putchar_fd(char c, int fd);
 void			ft_putstr(const char *str);
 void			ft_putstr_fd(const char *str, int fd);
@@ -41,7 +41,7 @@ void			print_bits(unsigned char octet);
 void			ft_putendl(char const *s);
 void			ft_putendl_fd(char const *s, int fd);
 void			*ft_memcpy(void *s1, const void *s2, size_t n);
-void			*ft_memccpy(void *s1, const void *s2,int c, size_t n);
+void			*ft_memccpy(void *s1, const void *s2, int c, size_t n);
 void			*ft_memchr(const void *s, int c, size_t n);
 void			*ft_memalloc(size_t size);
 void			*ft_memset(void *b, int c, size_t len);
@@ -77,9 +77,9 @@ char			*ft_strrchr(const char *s, int c);
 char			*ft_strnew(size_t size);
 char			*ft_strsub(char const *s, unsigned int start, size_t len);
 char			*ft_strstr(char *haystack, const char *needle);
-char			*ft_strnstr(char *haystack, const char *needle, size_t len);
-char			*ft_strjoin(char const *s1, char const *s2);
+char			*ft_strnstr(const char *s1, const char *s2, size_t len);
 char			*ft_strtrim(char const *s);
+char			*ft_strjoin(char const *s1, char const *s2);
 char			**ft_strsplit(char const *s, char c);
 void			ft_strdel(char **as);
 void			ft_strclr(char *s);

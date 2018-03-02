@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:59:15 by atemunov          #+#    #+#             */
-/*   Updated: 2018/02/19 17:12:26 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/02/27 17:27:23 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,17 +14,24 @@
 
 char	*ft_strncat(char *dest, const char *src, size_t n)
 {
-	size_t dest_size;
-	size_t i;
+	char		*s1;
+	char		*s2;
+	size_t		i;
+	int			j;
 
+	j = 0;
 	i = 0;
-	dest_size = 0;
-	while (i < n && src[i] != '\0')
+	s1 = (char *)dest;
+	s2 = (char *)src;
+	while (s1[j])
+		j++;
+	while (i < n && s2[i])
 	{
-		dest[dest_size + i] = src[i];
-		dest_size++;
+		s1[j] = s2[i];
 		i++;
+		j++;
+		
 	}
-	dest[dest_size] = '\0';
-	return (dest);
+	s1[j] = '\0';
+	return (s1);
 }
