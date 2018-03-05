@@ -6,7 +6,7 @@
 /*   By: atemunov <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/02/19 12:36:03 by atemunov          #+#    #+#             */
-/*   Updated: 2018/03/01 19:09:34 by atemunov         ###   ########.fr       */
+/*   Updated: 2018/03/05 14:50:20 by atemunov         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@
 # define DIGIT(x) (x >= '0' && x <= '9')
 # define ISIGN(x) (x == '+' || x == '-')
 # define ESCAPE(x) (x == ' ' || x == '\n' || x == '\t')
+# define ESEQUENCE(x) ((x == ' ') || (x == '\t') || (x == '\n') || (x == '\r') || (x == '\v') || (x == '\f'))
 
 typedef struct	s_list
 {
